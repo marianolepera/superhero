@@ -13,8 +13,8 @@ function App() {
     <>
     <Header></Header>
     <Routes>
-      <Route path="/heros" element={<SuperheroList />} />
-      <Route path="/heros/:id" element={<SuperHeroDetail />} />
+      <Route path="/" element={<SuperheroList />} />
+      <Route path="/:id" element={<SuperHeroDetail />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </>

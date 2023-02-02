@@ -38,7 +38,7 @@ const SuperheroList: FC = () =>{
            
              {currentHeros?.map((hero) => (
                 <div key={hero.id} className="group relative">
-                    <Link to={`/heros/${hero.id}`}>
+                    <Link to={`/${hero.id}`}>
                         <SuperHeroCard hero={hero}/>
                     </Link>
                   
