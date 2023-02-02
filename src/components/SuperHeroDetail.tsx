@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 const SuperHeroDetail =()=> {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { id } = useParams()
+  const { id }:any = useParams()
 
   useEffect(() => {
     dispatch(getHerobyId(id));

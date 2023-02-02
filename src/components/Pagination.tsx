@@ -5,7 +5,7 @@ export default function Pagination({
   totalHeros,
   paginate,
   currentPage,
-}) {
+}:any) {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalHeros / herosPerPage); i++) {
