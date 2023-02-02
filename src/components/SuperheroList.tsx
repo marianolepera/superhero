@@ -22,7 +22,7 @@ const SuperheroList: FC = () =>{
     const indexOfLastHero = currentPage * herosPerPage;
     const indexOfFirstHero = indexOfLastHero - herosPerPage;
     const currentHeros = heros?.slice(indexOfFirstHero, indexOfLastHero);
-    const paginate = (pageNumber:any) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber:number) => setCurrentPage(pageNumber);
 
     if(loading){
         return <Loader/>
@@ -39,7 +39,7 @@ const SuperheroList: FC = () =>{
              {currentHeros?.map((hero) => (
                 <div key={hero.id} className="group relative">
                     <Link to={`/heros/${hero.id}`}>
-                        <SuperHeroCard hero={hero}></SuperHeroCard>
+                        <SuperHeroCard hero={hero}/>
                     </Link>
                   
                 </div>

@@ -1,11 +1,14 @@
 import React from "react";
+import { FC } from "react";
 
-export default function Pagination({
-  herosPerPage,
-  totalHeros,
-  paginate,
-  currentPage,
-}:any) {
+interface PaginationInterface {
+  herosPerPage:number,
+  totalHeros:any,
+  paginate:any,
+  currentPage:number
+}
+
+const  Pagination:FC<PaginationInterface> =({herosPerPage,totalHeros,paginate,currentPage}:PaginationInterface) =>{
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalHeros / herosPerPage); i++) {
@@ -38,3 +41,5 @@ export default function Pagination({
     </div>
   );
 }
+
+export default Pagination

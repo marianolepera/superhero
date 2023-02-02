@@ -1,5 +1,9 @@
 import { FC } from "react";
-const SuperHeroCard: FC  = ({hero}:any) =>{
+import Hero from "../interfaces/heroInterface";
+interface SuperHeroCardInterface {
+    hero: Hero
+}
+const SuperHeroCard: FC<SuperHeroCardInterface>  = ({hero}:SuperHeroCardInterface) =>{
     return(
         <>
             <div className="max-w-sm rounded overflow-hidden shadow-lg hover:scale-110 transition duration-300 transform  shadow-lg hover:shadow-indigo-600 hover:shadow-md">
